@@ -57,25 +57,18 @@
         but: "order.jpg"
     }
 
-    // Полная стоимость
     let fullCost = `${card.cost},00 ${card.currency}`;
-    // alert(fullCost);
-
-    // Расчет стоимости по акции
+    
     let cost1 = 0;
     cost1 = card.cost * .9;
 
     let saleCost = `${Math.floor(cost1)},00 ${card.currency}`;
-    // alert(saleCost);
-
-    // Расчет рейтинга
+   
     let st = '';
         for (i=1; i<=card.rating; i++) {
            st += '<span class="material-icons">star</span>';  
         }
         st += '<span class="material-icons">star_border</span>';
-
-        // alert(st);
 
     let r ="";
     if (card.sales)  r =`<div>${saleCost}</div>`;
